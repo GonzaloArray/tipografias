@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipeando | Home</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://kit.fontawesome.com/eadeaa3284.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Sweet Alert -->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bodyContainer" id="body">
+    <header>
+        <section class="container-md container-fluid">
+            <div class="d-flex justify-content-between align-items-center pt-4 pb-5">
+                <h2 class="text-primary fs-4"><a class="nav-link" href="">Tipeando</a></h2>
+
+                <nav>
+                    <ul class="d-flex align-items-center m-0">
+                        <li class="text-primary me-3"><a class="fw-bold" href="#">Inicio</a></li>
+                        <li class="nav-item me-3"><a id="noActive" class="nav-link fw-bold not-active" href="./html/catalogo.html" >Catálogo</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="">Perfil</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main class="flex-auto d-flex flex-column justify-content-evenly bg-linear">
+        <div class="container-md container-fluid">
+            <section class="row d-flex">
+                <div class="col-md-5">
+                    <h2 class="fs-1">¿Estás buscando la tipografía ideal para tú página web?</h2>
+                    <p class="mt-4 w-75 fs-5">Nosotros tenemos la tipografia ideal para vos, y lo mejor de todo <span
+                            class="text-primary">¡Es gratis!</span></p>
+                </div>
+                <div class="col-md-7 d-flex justify-content-center">
+                    <img src="./img/emojione_desktop-computer.png" alt="Computer">
+                </div>
+            </section>
+        </div>
+        <section class="fondoPantalla bg-light my-5">
+            <div
+                class="container d-flex justify-content-between align-items-center flex-column flex-sm-row py-5 pe-md-5">
+                <div class="widthTotal">
+                    <h2 class="fs-3">Respondé nuestro cuestionario</h2>
+                    <p class="fs-6 pe-md-5 w-75">Si contestas correctamente nuestra trivia. Podras acceder a todo
+                        nuestro catálogo tipográfico sin ningún costo.</p>
+                </div>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                    id="comenzar" class="text-primary border-0 fw-semibold button-neo px-4 py-3 me-5 fs-5">Comenzá <i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section class="modalForm"></section>
+
+    </main>
+
+    <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-4 fw-bold ms-5" id="exampleModalLabel">Responde las siguientes preguntas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="fs-5 ms-5">Sí contestas correctamente nuestra trivia, podrás acceder a todo nuestro catálogo
+                        tipográfico sin ningún costo.</h2>
+                    <form class="container" id="check">
+
+                        <div  class="row form__ask">
+
+                        </div>
+
+
+                        <div class="mx-auto d-flex justify-content-center mt-5">
+                            <button class="bottonCatalogo shadow py-3 px-5" type="submit">Responder</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <!-- Js -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
