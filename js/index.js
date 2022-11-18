@@ -5,55 +5,9 @@ const formAsk = document.querySelector(".form__ask");
 const checkRadio = document.querySelector("#check");
 const notActive = document.querySelector("#noActive");
 
-const objInfo = [
-    {
-        title: "Pregunta 1",
-        ask: "¿Roboto es una tipografia que tiene serifas?",
-        button1: "Si",
-        button2: "No",
-        name: "pregunta1",
-        check: "check1",
-        buttonId: "radio1",
-        buttonId2: "radio2",
-        id: 1,
-    },
-    {
-        title: "Pregunta 2",
-        ask: "¿Es Comic Sans una de las fuentes más usadas en impresion editorial?",
-        button1: "Si",
-        button2: "No",
-        name: "pregunta2",
-        check: "check2",
-        buttonId: "radio3",
-        buttonId2: "radio4",
-        id: 2,
-    },
-    {
-        title: "Pregunta 3",
-        ask: "¿Una fuente Sans Serif es lo mismo que una fuente palo seco?",
-        button1: "Si",
-        button2: "No",
-        name: "pregunta3",
-        check: "check3",
-        buttonId: "radio5",
-        buttonId2: "radio6",
-        id: 3,
-    },
-    {
-        title: "Pregunta 4",
-        ask: "¿Futura fue una tipografia diseñada por un tipografo alemán?",
-        button1: "Si",
-        button2: "No",
-        name: "pregunta4",
-        check: "check4",
-        buttonId: "radio7",
-        buttonId2: "radio8",
-        id: 4,
-    },
-]
 
 function iniciarApp() {
-    domRenderAsk();
+    cuestionarioJson();
     checkRadio.addEventListener("submit", totalCuestion)
 
     const activar = localStorage.getItem('activar');
@@ -63,10 +17,22 @@ function iniciarApp() {
         return
     }
 }
+// Fetch
+const cuestionarioJson = async () => {
+    try {
+        const url = "./cuestionario.json"
+        const response = await fetch(url);
+        const cuestionario = await response.json();
 
-const domRenderAsk = () => {
+        domRenderAsk(cuestionario)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-    objInfo.forEach(pregunta => {
+const domRenderAsk = (preguntas) => {
+
+    preguntas.forEach(pregunta => {
 
         const { title, check, ask, button1, button2, buttonId, buttonId2 } = pregunta;
 
@@ -96,7 +62,7 @@ const totalCuestion = (e) => {
     const inputCheck = document.querySelectorAll("input[type='radio']");
     const check = [...inputCheck, inputCheck];
     const trueCheck = check.filter(inputCheck => inputCheck.checked);
-    const valueCheck = trueCheck.map(check => check.value)
+    const valueCheck = trueCheck.map(check => check.value);
 
     resolveQuestion(valueCheck);
 }

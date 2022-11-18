@@ -24,6 +24,9 @@ img{
 #body{
     height: 100vh!important;
 }
+#catalogo{
+    height: 100vh;
+}
 
 /* Clases */
 .bodyContainer{

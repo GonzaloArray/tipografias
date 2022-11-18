@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Pregunta 1",
+        "ask": "¿Roboto es una tipografia que tiene serifas?",
+        "button1": "Si",
+        "button2": "No",
+        "name": "pregunta1",
+        "check": "check1",
+        "buttonId": "radio1",
+        "buttonId2": "radio2",
+        "id": 1
+    },
+    {
+        "title": "Pregunta 2",
+        "ask": "¿Es Comic Sans una de las fuentes más usadas en impresion editorial?",
+        "button1": "Si",
+        "button2": "No",
+        "name": "pregunta2",
+        "check": "check2",
+        "buttonId": "radio3",
+        "buttonId2": "radio4",
+        "id": 2
+    },
+    {
+        "title": "Pregunta 3",
+        "ask": "¿Una fuente Sans Serif es lo mismo que una fuente palo seco?",
+        "button1": "Si",
+        "button2": "No",
+        "name": "pregunta3",
+        "check": "check3",
+        "buttonId": "radio5",
+        "buttonId2": "radio6",
+        "id": 3
+    },
+    {
+        "title": "Pregunta 4",
+        "ask": "¿Futura fue una tipografia diseñada por un tipografo alemán?",
+        "button1": "Si",
+        "button2": "No",
+        "name": "pregunta4",
+        "check": "check4",
+        "buttonId": "radio7",
+        "buttonId2": "radio8",
+        "id": 4
+    }
+]

@@ -4,27 +4,31 @@
         "origen": "Romana antigua",
         "url_local": "alegreya",
         "varibales": 10,
-        "descr": "Alegreya es una tipografia para uso de diseño web más animadas"
+        "descr": "Alegreya es una tipografia para uso de diseño web más animadas",
+        "id": 1
     },
     {
         "nombre": "Rubik",
         "origen": "Grotescas",
         "url_local": "rubik",
         "varibales": 14,
-        "descr": "Rubik es una tipografia para uso de diseño web más animadas"
+        "descr": "Rubik es una tipografia para uso de diseño web más animadas",
+        "id": 2
     },
     {
         "nombre": "Josefin Sans",
         "origen": "Geométricas",
         "url_local": "josefinsans",
         "varibales": 10,
-        "descr": "Josefin Sans es una tipografia para uso de diseño web más animadas"
+        "descr": "Josefin Sans es una tipografia para uso de diseño web más animadas",
+        "id": 3
     },
     {
         "nombre": "Montserrat",
         "origen": "Geométricas",
         "url_local": "montserrat",
         "varibales": 18,
-        "descr": "Montserrat es una tipografia para uso de diseño web más animadas"
+        "descr": "Montserrat es una tipografia para uso de diseño web más animadas",
+        "id": 4
     }
 ]
