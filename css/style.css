@@ -110,6 +110,22 @@ img{
 .montserrat{
     font-family: 'Montserrat', sans-serif;
 }
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.robotomono{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.rubikmicrobe{
+    font-family: 'Rubik Microbe', cursive;
+}
+
+.ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .bgTipeando{
     background-color: var(--primaria);
 }

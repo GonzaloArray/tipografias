@@ -24,11 +24,35 @@
         "id": 3
     },
     {
-        "nombre": "Montserrat",
+        "nombre": "Poppins",
         "origen": "Geométricas",
-        "url_local": "montserrat",
+        "url_local": "poppins",
         "varibales": 18,
-        "descr": "Montserrat es una tipografia para uso de diseño web más animadas",
+        "descr": "Poppins es una tipografia para uso de diseño web más animadas",
         "id": 4
+    },
+    {
+        "nombre": "Rubik Microbe",
+        "origen": "Geométricas",
+        "url_local": "rubikmicrobe",
+        "varibales": 18,
+        "descr": "Rubik microbe es una tipografia para uso de diseño web más animadas",
+        "id": 5
+    },
+    {
+        "nombre": "Roboto Mono",
+        "origen": "Geométricas",
+        "url_local": "robotomono",
+        "varibales": 18,
+        "descr": "Roboto mono es una tipografia para uso de diseño web más animadas",
+        "id": 6
+    },
+    {
+        "nombre": "Ubuntu",
+        "origen": "Geométricas",
+        "url_local": "ubuntu",
+        "varibales": 18,
+        "descr": "Ubuntu es una tipografia para uso de diseño web más animadas",
+        "id": 7
     }
 ]
