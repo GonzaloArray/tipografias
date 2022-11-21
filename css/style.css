@@ -154,3 +154,6 @@ img{
     cursor: default;
     opacity: .5;
 }
+.z-index{
+    z-index: 2!important;
+}

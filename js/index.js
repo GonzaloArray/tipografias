@@ -6,9 +6,12 @@ const checkRadio = document.querySelector("#check");
 const notActive = document.querySelector("#noActive");
 
 
+// Pregunstas y respuesta
+let preguntas = [];
+
 function iniciarApp() {
     cuestionarioJson();
-    checkRadio.addEventListener("submit", totalCuestion)
+    checkRadio.addEventListener("submit", totalCuestion);
 
     const activar = localStorage.getItem('activar');
 
@@ -25,6 +28,8 @@ const cuestionarioJson = async () => {
         const cuestionario = await response.json();
 
         domRenderAsk(cuestionario)
+        preguntas = [...cuestionario]
+
     } catch (error) {
         console.log(error)
     }
@@ -37,7 +42,7 @@ const domRenderAsk = (preguntas) => {
         const { title, check, ask, button1, button2, buttonId, buttonId2 } = pregunta;
 
         const askModal = document.createElement("div");
-        askModal.className = "col-6 d-flex justify-content-center align-items-center"
+        askModal.className = "col-12 col-sm-6 d-flex justify-content-center align-items-center"
         askModal.innerHTML = /* html */ `
             <div class="my-4 w-75">
                 <h2 class="fs-5 text-primary">${title}</h2>
@@ -59,44 +64,37 @@ const domRenderAsk = (preguntas) => {
 const totalCuestion = (e) => {
     e.preventDefault();
 
+
     const inputCheck = document.querySelectorAll("input[type='radio']");
     const check = [...inputCheck, inputCheck];
     const trueCheck = check.filter(inputCheck => inputCheck.checked);
-    const valueCheck = trueCheck.map(check => check.value);
+    const valueCheck = trueCheck.map((check, index) => {
 
-    resolveQuestion(valueCheck);
-}
-
-const resolveQuestion = (response) => {
-
-    const valor = response.reduce((acc, prev, indice) => {
-        acc[indice] = prev.toLowerCase();
-        return acc
-    }, {});
-
-    const arrayResponse = [valor];
-
-    validationResponse(arrayResponse);
-}
-
-const validationResponse = (valid) => {
-    valid.forEach(resp => {
-        console.log(resp)
-        if (resp[0] == "si" && resp[1] == "si" && resp[2] == "no" && resp[3] == "no") {
-            Swal.fire({
-                icon: 'success',
-                title: 'Buen Trabajo!',
-                text: 'Ya se habilito la seccion de Catálogo, disfrute!',
-                footer: '<a href="./html/catalogo.html">Ingrese al Catalogo</a>',
-            })
-            notActive.classList.remove("not-active")
-            localStorage.setItem('activar', 'si');
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops... Sigue intentando pequeño Tipografo',
-                text: 'Something went wrong!',
-            })
+        if (check.value.toLowerCase() == preguntas[index].response) {
+            return preguntas[index].response
         }
-    })
+    }).filter(element => element !== undefined);
+
+    formSuccess(valueCheck)
+}
+
+const formSuccess = (valor) => {
+
+    if (valor.length == preguntas.length) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Buen Trabajo!',
+            text: 'Ya se habilito la seccion de Catálogo, disfrute!',
+            footer: '<a href="./html/catalogo.html">Ingrese al Catalogo</a>',
+        })
+        notActive.classList.remove("not-active")
+        localStorage.setItem('activar', 'si');
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops... Sigue intentando pequeño Tipografo',
+            text: 'Something went wrong!',
+        })
+    }
+
 }
